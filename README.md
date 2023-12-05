@@ -202,10 +202,11 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 ### 1.21 Creating a view table for visualisation in Power Bi
 #### SQL Code Used:
 	create view Crash_Data_Cleaned_in_SQL as 
-
+	select *
+	from CrashData..[Crash_Data]
 ## 2 Visualization in Power Bi
 ### 2.1	Questions to answer/KPIs 
- 1.1	What is the total number of crashes 
+#### 2.1.1	What is the total number of crashes 
 		1.2	What is the total number of casualties involved
 		1.3	What is the total number of fatal crashes
 		1.4	What is the total number of fatal casualties
@@ -239,7 +240,6 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 
 
  
-	select *
-	from CrashData..[Crash_Data]
+	
 
 
