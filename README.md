@@ -199,3 +199,10 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 	from  CrashData..Crash_Data 
 	group by Crash_Year, Weather
 	order by Crash_Year
+### 1.21 Creating a view table for visualisation in Power Bi
+#### SQL Code Used:
+	create view Crash_Data_Cleaned_in_SQL as 
+	select *
+	from CrashData..[Crash_Data]
+
+
