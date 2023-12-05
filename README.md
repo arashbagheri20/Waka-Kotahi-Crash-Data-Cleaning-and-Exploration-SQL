@@ -10,14 +10,14 @@ Exploring and visualisation of 814772 traffic crashes reported since January 200
 		Replacing the Null values in the “RoadSurface” column with 'Unknown' (using the replace function).   
 		Adding Country name to the crash location (because there are other countries with similar city or district names as New Zealand) not to face problems in future for visualisation (using the concat function).   
 		Replacing 'NULL' values in the “Weather” column with "Unknown' (using the replace function).   
-#### SQL Code Used:
-	select meshblockId as Mesh_Block_ID, 
-	bicycle as Bicycle ,bus as Bus,carStationWagon as Car_Station_Wagon,moped as Moped,motorcycle as Motorcycle,schoolBus as School_Bus, truck as Truck, isnull(train,0) as Train,
-	crashSeverity as Crash_Severity, fatalCount as Fatal_Count, minorInjuryCount as Minor_Injury_Count,seriousInjuryCount as Serious_Injury_Count, isnull(pedestrian,0) as Pedestatian, 
-	isnull(roadSurface,'Unknown') as Road_Surface,concat(tlaName,', New Zealand') as Crash_Location, urban as Area_Type, replace(weatherA,'NULL','Unknown') as Weather, light as Light, crashYear as Crash_Year 
-	into CrashData..[Crash_Data]
-	from CrashData..[Crash_Analysis_System_(CAS)_data] 
-	where crashYear <2023;
+		#### SQL Code Used:
+			select meshblockId as Mesh_Block_ID, 
+			bicycle as Bicycle ,bus as Bus,carStationWagon as Car_Station_Wagon,moped as Moped,motorcycle as Motorcycle,schoolBus as School_Bus, truck as Truck, isnull(train,0) as Train,
+			crashSeverity as Crash_Severity, fatalCount as Fatal_Count, minorInjuryCount as Minor_Injury_Count,seriousInjuryCount as Serious_Injury_Count, isnull(pedestrian,0) as Pedestatian, 
+			isnull(roadSurface,'Unknown') as Road_Surface,concat(tlaName,', New Zealand') as Crash_Location, urban as Area_Type, replace(weatherA,'NULL','Unknown') as Weather, light as Light, crashYear as Crash_Year 
+			into CrashData..[Crash_Data]
+			from CrashData..[Crash_Analysis_System_(CAS)_data] 
+			where crashYear <2023;
 ### 1.2 Executing a query to look at the number of accidents by Crash Severity (using group by)
 #### SQL Code Used:
 	select Crash_Severity, 
@@ -27,8 +27,8 @@ Exploring and visualisation of 814772 traffic crashes reported since January 200
 	order by Crash_Severity
 
 
-### 1.23 Executing a query to look at the number of accidents by Crash Severity over the years (using group by)
-	#### SQL Code Used:
+### 1.3 Executing a query to look at the number of accidents by Crash Severity over the years (using group by)
+#### SQL Code Used:
 	select Crash_Year, Crash_Severity,
 	count(Mesh_Block_ID) as Acccident_Count
 	from  CrashData..Crash_Data 
