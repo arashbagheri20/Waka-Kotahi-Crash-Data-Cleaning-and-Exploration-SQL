@@ -206,7 +206,7 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 	from CrashData..[Crash_Data]
 ## 2 Visualization in Power Bi
 ### 2.1	Questions to answer/KPIs 
-#### 	2.1.1	What is the total number of crashes 
+#### 2.1.1	What is the total number of crashes 
 #### 	2.1.2	What is the total number of casualties involved
 #### 	2.1.3	What is the total number of fatal crashes
 #### 	2.1.4	What is the total number of fatal casualties
