@@ -18,14 +18,13 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 	into CrashData..[Crash_Data]
 	from CrashData..[Crash_Analysis_System_(CAS)_data] 
 	where crashYear <2023;
-### 	1.2 
-		--Executing a query to look at the number of accidents by Crash Severity (using group by)
-			- SQL Code Used:  
-			select Crash_Severity, 
-			count(Mesh_Block_ID) as Acccident_Count
-			from  CrashData..Crash_Data 
-			group by Crash_Severity
-			order by Crash_Severity
+### 1.2 Executing a query to look at the number of accidents by Crash Severity (using group by)
+#### SQL Code Used:
+	select Crash_Severity, 
+	count(Mesh_Block_ID) as Acccident_Count
+	from  CrashData..Crash_Data 
+	group by Crash_Severity
+	order by Crash_Severity
 
 
 --Executing a query to look at the number of accidents by Crash Severity over the years (using group by)
