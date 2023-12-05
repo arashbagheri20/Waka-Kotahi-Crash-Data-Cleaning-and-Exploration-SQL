@@ -1,29 +1,32 @@
 # Waka-Kotahi-Crash-Data-Exploration-SQL
 ## Project Objective
-Exploring 814772 traffic crashes reported since January 2000 to Waka Kotahi by New Zealand police
+Exploring and visualisation of 814772 traffic crashes reported since January 2000 to Waka Kotahi by New Zealand police
 ## Tools:
 - Data Cleaning & Exploration: SQL Server
-
--- Creating a new table (named Crash_Data) in the database without unnecessary columns and cleaning data:
-	-- Replacing the Null values in “Train” and “Pedestrian” columns with '0' (using the isnull function).
-	-- Replacing the Null values in the “RoadSurface” column with 'Unknown' (using the replace function).
-	-- Adding Country name to the crash location (because there are other countries with similar city or district names as New Zealand) not to face problems in future for visualisation (using the concat function).
-	-- Replacing 'NULL' values in the “Weather” column with "Unknown' (using the replace function).
-
-select meshblockId as Mesh_Block_ID, 
-bicycle as Bicycle ,bus as Bus,carStationWagon as Car_Station_Wagon,moped as Moped,motorcycle as Motorcycle,schoolBus as School_Bus, truck as Truck, isnull(train,0) as Train,
-crashSeverity as Crash_Severity, fatalCount as Fatal_Count, minorInjuryCount as Minor_Injury_Count,seriousInjuryCount as Serious_Injury_Count, isnull(pedestrian,0) as Pedestatian, 
-isnull(roadSurface,'Unknown') as Road_Surface,concat(tlaName,', New Zealand') as Crash_Location, urban as Area_Type, replace(weatherA,'NULL','Unknown') as Weather, light as Light, crashYear as Crash_Year 
-into CrashData..[Crash_Data]
-from CrashData..[Crash_Analysis_System_(CAS)_data] 
-where crashYear <2023;
-
---Executing a query to look at the number of accidents by Crash Severity (using group by)
-select Crash_Severity, 
-count(Mesh_Block_ID) as Acccident_Count
-from  CrashData..Crash_Data 
-group by Crash_Severity
-order by Crash_Severity
+- Visualization: Power Bi
+## 1 Data Cleaning & Exploration
+### 	1.1 
+		--Creating a new table (named Crash_Data) in the database without unnecessary columns and cleaning data:
+			--Replacing the Null values in “Train” and “Pedestrian” columns with '0' (using the isnull function).
+			-- Replacing the Null values in the “RoadSurface” column with 'Unknown' (using the replace function).
+			-- Adding Country name to the crash location (because there are other countries with similar city or district names as New Zealand) not to face problems in future for visualisation (using the concat function).
+			-- Replacing 'NULL' values in the “Weather” column with "Unknown' (using the replace function).
+			- SQL Code Used:
+				select meshblockId as Mesh_Block_ID, 
+				bicycle as Bicycle ,bus as Bus,carStationWagon as Car_Station_Wagon,moped as Moped,motorcycle as Motorcycle,schoolBus as School_Bus, truck as Truck, isnull(train,0) as Train,
+				crashSeverity as Crash_Severity, fatalCount as Fatal_Count, minorInjuryCount as Minor_Injury_Count,seriousInjuryCount as Serious_Injury_Count, isnull(pedestrian,0) as Pedestatian, 
+				isnull(roadSurface,'Unknown') as Road_Surface,concat(tlaName,', New Zealand') as Crash_Location, urban as Area_Type, replace(weatherA,'NULL','Unknown') as Weather, light as Light, crashYear as Crash_Year 
+				into CrashData..[Crash_Data]
+				from CrashData..[Crash_Analysis_System_(CAS)_data] 
+				where crashYear <2023;
+### 	1.2 
+		--Executing a query to look at the number of accidents by Crash Severity (using group by)
+			- SQL Code Used:  
+			select Crash_Severity, 
+			count(Mesh_Block_ID) as Acccident_Count
+			from  CrashData..Crash_Data 
+			group by Crash_Severity
+			order by Crash_Severity
 
 
 --Executing a query to look at the number of accidents by Crash Severity over the years (using group by)
