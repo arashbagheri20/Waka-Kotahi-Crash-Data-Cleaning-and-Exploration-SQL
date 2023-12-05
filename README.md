@@ -1,5 +1,8 @@
 # Waka-Kotahi-Crash-Data-Exploration-SQL
-
+## Project Objective
+Exploring 814772 traffic crashes reported since January 2000 to Waka Kotahi by New Zealand police
+## Tools:
+- Data Cleaning & Exploration: SQL Server
 
 -- Creating a new table (named Crash_Data) in the database without unnecessary columns and cleaning data:
 	-- Replacing the Null values in “Train” and “Pedestrian” columns with '0' (using the isnull function).
