@@ -6,10 +6,10 @@ Exploring and visualisation of 814772 traffic crashes reported since January 200
 - Visualization: Power Bi
 ## 1 Data Cleaning & Exploration
 ### 	1.1 Creating a new table (named Crash_Data) in the database without unnecessary columns and cleaning data:   
-	Replacing the Null values in “Train” and “Pedestrian” columns with '0' (using the isnull function).   
-	Replacing the Null values in the “RoadSurface” column with 'Unknown' (using the replace function).   
-	Adding Country name to the crash location (because there are other countries with similar city or district names as New Zealand) not to face problems in future for visualisation (using the concat function).   
-	Replacing 'NULL' values in the “Weather” column with "Unknown' (using the replace function).   
+Replacing the Null values in “Train” and “Pedestrian” columns with '0' (using the isnull function).   
+Replacing the Null values in the “RoadSurface” column with 'Unknown' (using the replace function).   
+Adding Country name to the crash location (because there are other countries with similar city or district names as New Zealand) not to face problems in future for visualisation (using the concat function).   
+Replacing 'NULL' values in the “Weather” column with "Unknown' (using the replace function).   
 #### SQL Code Used:
 	select meshblockId as Mesh_Block_ID, 
 	bicycle as Bicycle ,bus as Bus,carStationWagon as Car_Station_Wagon,moped as Moped,motorcycle as Motorcycle,schoolBus as School_Bus, truck as Truck, isnull(train,0) as Train,
