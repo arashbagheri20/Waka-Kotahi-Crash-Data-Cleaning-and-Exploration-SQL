@@ -220,7 +220,11 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 #### 2.1.10	What is the distribution of fatal casualties by the type of area (open or urban) where the crash happened?
 #### 2.1.11	What is the distribution of fatal casualties by the district(city) area where the crash happened?
 
-### 2.2
+### 2.2 Measures 
+#### 2.2.1 Total Crashes
+#### DAX Code Used:
+	
+
 
 
 
