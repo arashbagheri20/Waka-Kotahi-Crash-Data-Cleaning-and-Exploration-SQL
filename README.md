@@ -202,6 +202,43 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 ### 1.21 Creating a view table for visualisation in Power Bi
 #### SQL Code Used:
 	create view Crash_Data_Cleaned_in_SQL as 
+
+## 2 Visualization in Power Bi
+### 2.1	Questions to answer/KPIs 
+ 1.1	What is the total number of crashes 
+		1.2	What is the total number of casualties involved
+		1.3	What is the total number of fatal crashes
+		1.4	What is the total number of fatal casualties
+		1.5	What is the total number of seriously injured casualties
+		1.6	What is the total number of minorly-injured casualties
+		1.7	What is the distribution of fatal casualties by the type of vehicles involved? (Cars, trucks, motorcycles, etc)
+		1.8	What is the trend of fatal casualties from 2000-2022
+		1.9	What is the distribution of fatal casualties by road surface used?
+		1.10	What is the distribution of fatal casualties by the type of area (open or urban) where the crash happened?
+		1.11	What is the distribution of fatal casualties by the district(city) area where the crash happened?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 	select *
 	from CrashData..[Crash_Data]
 
