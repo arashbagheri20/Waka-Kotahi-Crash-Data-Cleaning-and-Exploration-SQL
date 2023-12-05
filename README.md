@@ -5,6 +5,8 @@ Exploring and visualisation of 814772 traffic crashes reported since January 200
 - Data Cleaning & Exploration: SQL Server
 - Visualization: Power Bi
 ## 1 Data Cleaning & Exploration
+### 1.0 Downloading crash data in CSV format from Waka Kotahi Crash Analysis System on:
+https://opendata-nzta.opendata.arcgis.com/search?tags=CAS
 ### 	1.1 Creating a new table (named Crash_Data) in the database without unnecessary columns and cleaning data:   
 Replacing the Null values in “Train” and “Pedestrian” columns with '0' (using the isnull function).   
 Replacing the Null values in the “RoadSurface” column with 'Unknown' (using the replace function).   
@@ -207,18 +209,18 @@ Replacing 'NULL' values in the “Weather” column with "Unknown' (using the re
 ## 2 Visualization in Power Bi
 ### 2.1	Questions to answer/KPIs 
 #### 2.1.1	What is the total number of crashes 
-#### 	2.1.2	What is the total number of casualties involved
-#### 	2.1.3	What is the total number of fatal crashes
-#### 	2.1.4	What is the total number of fatal casualties
-#### 	2.1.5	What is the total number of seriously injured casualties
-#### 	2.1.6	What is the total number of minorly-injured casualties
-#### 	2.1.7	What is the distribution of fatal casualties by the type of vehicles involved? (Cars, trucks, motorcycles, etc)
-#### 	2.1.8	What is the trend of fatal casualties from 2000-2022
-#### 	2.1.9	What is the distribution of fatal casualties by road surface used?
-#### 	2.1.10	What is the distribution of fatal casualties by the type of area (open or urban) where the crash happened?
-#### 	2.1.11	What is the distribution of fatal casualties by the district(city) area where the crash happened?
+#### 2.1.2	What is the total number of casualties involved
+#### 2.1.3	What is the total number of fatal crashes
+#### 2.1.4	What is the total number of fatal casualties
+#### 2.1.5	What is the total number of seriously injured casualties
+#### 2.1.6	What is the total number of minorly-injured casualties
+#### 2.1.7	What is the distribution of fatal casualties by the type of vehicles involved? (Cars, trucks, motorcycles, etc)
+#### 2.1.8	What is the trend of fatal casualties from 2000-2022
+#### 2.1.9	What is the distribution of fatal casualties by road surface used?
+#### 2.1.10	What is the distribution of fatal casualties by the type of area (open or urban) where the crash happened?
+#### 2.1.11	What is the distribution of fatal casualties by the district(city) area where the crash happened?
 
-
+### 2.2
 
 
 
